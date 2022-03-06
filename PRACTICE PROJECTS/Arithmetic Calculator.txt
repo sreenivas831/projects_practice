@@ -1,0 +1,74 @@
+  Arithmetic Calcualtor Sourcecode
+
+package com;
+import java.util.Scanner;
+class Calc1{
+	
+	int x,y;
+	Calc1(int x, int y)
+	{
+		this.x = x;
+		this.y = y;
+	}
+	
+	int add()
+	{
+		return x+y;
+	}
+	 int sub()
+	 {
+		 return x-y;
+	 }
+	 
+	 int mul()
+	 {
+		 return x*y;
+	 }
+	 
+	 int div()
+	 {
+		 return x/y;
+	 }
+}
+
+public class Calculator1
+{
+	
+	public static void main(String[] args)
+	{
+		
+		@SuppressWarnings("resource")
+		Scanner ab = new Scanner(System.in);
+		System.out.println("Enter first number");
+		int x = ab.nextInt();
+		System.out.println("Enter second number");
+		int y = ab.nextInt();
+		System.out.println("enter operator(+,-,*,/)");
+		String op = ab.next();
+		int z = 0;
+		Calc1 c = new Calc1(x,y);
+		switch(op)
+		{
+		
+		case "+":
+			z = c.add();
+			break;
+				
+		case "-":
+			z = c.sub();
+			break;
+			
+		case "*":
+			z = c.mul();
+			break;
+			
+		case "/":
+			z = c.div();
+			break;
+			
+			default:
+				System.out.println("Invalid");
+		}
+		System.out.println("result is :" +z);
+	}
+}
